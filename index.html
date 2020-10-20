@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="icons/css/all.min.css" />
+    <link rel="stylesheet" href="css/index.css" />
+
+    <!-- Title -->
+    <title>Calendar</title>
+  </head>
+  <body>
+    <div class="container">
+      <main>
+        <!-- ==Task manager== -->
+        <div class="task">
+          <!-- -Head- -->
+          <div class="task--head">
+            <h2>Task Manager</h2>
+          </div>
+
+          <!-- -Body- -->
+          <div class="task--body">
+            <!-- ‣Info -->
+            <div class="task--body-info">
+              <img src="images/avatar.jpg" alt="avatar" />
+              <h4>Sam Smith</h4>
+              <p>sam.smith@gmail.com</p>
+
+              <!-- ✅ Badge -->
+              <ul class="badge">
+                <li>
+                  <a href="">
+                    <i class="fas fa-cog"></i>
+                    <span style="display: none"></span>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <i class="fas fa-envelope"></i>
+                    <span>5</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <i class="fas fa-bell"></i>
+                    <span>6</span>
+                  </a>
+                </li>
+              </ul>
+
+              <!-- ✅ Progress -->
+              <div class="progress">
+                <div class="progress--status"></div>
+              </div>
+
+              <!-- ✅ List -->
+              <ul class="list">
+                <li>
+                  <a href="">
+                    <span>12</span>
+                    <p>Completed</p>
+                    <p>tasks</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <span>22</span>
+                    <p>To do</p>
+                    <p>tasks</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <span>69</span>
+                    <p>All</p>
+                    <p>completed</p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- ‣Project -->
+            <div class="task--body-project">
+              <h3>Project</h3>
+              <ul>
+                <li>
+                  <span></span>
+                  <p>Marketing</p>
+                </li>
+                <li>
+                  <span style="border-color: #5b52bc"></span>
+                  <p>Design</p>
+                </li>
+                <li>
+                  <span style="border-color: #f1c992"></span>
+                  <p>Development</p>
+                </li>
+                <li>
+                  <span style="border-color: #d7617f"></span>
+                  <p>Finance</p>
+                </li>
+              </ul>
+            </div>
+
+            <!-- ‣Team -->
+            <div class="task--body-team">
+              <h3>Team</h3>
+              <ul>
+                <li>
+                  <a href=""><img src="./images/avataaars1.png" alt="" /></a>
+                </li>
+                <li>
+                  <a href=""><img src="./images/avataaars2.png" alt="" /></a>
+                </li>
+                <li>
+                  <a href=""><img src="./images/avataaars3.png" alt="" /></a>
+                </li>
+                <li>
+                  <a href=""><img src="./images/avataaars4.png" alt="" /></a>
+                </li>
+                <li>
+                  <a href=""><img src="./images/avataaars5.png" alt="" /></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==Calendar== -->
+        <div class="calendar">
+          <!-- -Head -->
+          <div class="calendar--head">
+            <div>
+              <i class="fal fa-search"></i>
+              <input type="text" placeholder="Search..." />
+            </div>
+            <span>Calendar</span>
+            <div class="icon"><span>
+              ...
+            </span></div>
+          </div>
+
+          <!-- -Body -->
+          <div class="calendar--body">
+            <div class="calendar--body-options">
+              <div class="options--left">
+                <button>Week</button>
+                <button>Month</button>
+              </div>
+              <div class="options--middle">
+                <a href=""><pre><   October   ></pre></a>
+                <span>2018</span>
+              </div>
+              <div class="options--right">
+                <button id="showWeekends">Weekends</button>
+                <button id="showDays">Add Task</button>
+              </div>
+            </div>
+
+            <div class="calendar--body-table">
+              <ul class="weekdays">
+                <li>Monday</li>
+                <li>Tuesday</li>
+                <li>Wednesday</li>
+                <li>Thursday</li>
+                <li class="radius-top">Friday</li>
+                <li class="hidden">Saturday</li>
+                <li class="hidden">Sunday</li>
+              </ul>
+
+              <ul class="days">
+                <!-- <li class="purple">
+                  <span>1</span>
+                  <p>Marketing</p>
+                  <ul>
+                    <li>Sales report from last month</li>
+                    <li>Sales report from last month</li>
+                    <li>Sales report from last month</li>
+                    <li>Sales report from last month</li>
+                    <li>Prepare offers for clients</li>
+                  </ul>
+                  <div>
+                    <i class="far fa-check-square"></i>
+                    <i class="fas fa-check-circle"></i>
+                  </div>
+                </li> -->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- ==MODAL BOX== -->
+    <div id="modalBox">
+      <div>
+        <button class="category">+ Category</button>
+        <i class="far fa-calendar-alt"></i>
+      </div>
+      <div>
+        <i class="fas fa-check-circle"></i>
+        <div>
+          <h5>Title of the Task</h5>
+          <p>
+            Description DescriptionDescriptionDescriptionDescriptionDescription
+          </p>
+        </div>
+      </div>
+      <div>
+        <i class="fas fa-trash hidden2"></i>
+        <button class="add">Add Task</button>
+      </div>
+    </div>
+
+    <script src="js/vendor/jquery-3.5.1.js"></script>
+    <script src="js/variable.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

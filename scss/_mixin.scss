@@ -1,0 +1,42 @@
+@mixin button($bg-color, $text-color, $border) {
+  background-color: $bg-color;
+  color: $text-color;
+  border: 1px solid $border;
+  
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: 0.5s all;
+
+  &:hover {
+    background-color: rgba($color: $bg-color, $alpha: 0.7);
+    color: rgba($color: $text-color, $alpha: 0.8);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+// .purple {
+//   border-left: 3px solid #b76df8 !important;
+//   background-color: #f6eafe !important;
+//   ul li {
+//     color: #b36ffa;
+//   }
+// }
+
+@mixin cell($border, $background, $text) {
+  border-left: 3px solid $border !important;
+  background-color: $background !important;
+
+  li {
+    color: $text !important;
+  }
+
+  &:hover {
+    background-color: $border !important;
+    li {
+      color: white !important;
+    }
+  }
+}

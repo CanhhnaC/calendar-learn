@@ -1,0 +1,130 @@
+// Container
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+// Main
+img {
+  width: 100%;
+  height: auto;
+}
+
+main {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin-bottom: 100px;
+  // .task {
+  //   // flex-basis: 25%;
+  // }
+
+  .calendar {
+    flex-grow: 2;
+  }
+}
+
+.task {
+  max-width: 250px;
+  &--head {
+    padding: 25px 0;
+    height: 70px;
+  }
+
+  &--body {
+    //  ‣Info
+    &-info {
+      padding: 20px 30px;
+
+      .badge,
+      .list {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        padding: 20px 0;
+      }
+    }
+
+    //  ‣Project
+    &-project {
+      padding: 0 30px;
+      text-align: left;
+      h3 {
+        padding: 20px 0;
+      }
+    }
+
+    //  ‣Team
+    &-team {
+      padding: 10px 30px;
+      text-align: left;
+
+      ul {
+        display: flex;
+        flex-flow: row wrap;
+        padding-top: 15px;
+        // justify-content: space-between;
+
+        li {
+          flex: 0 0 calc(100% / 5);
+        }
+      }
+    }
+  }
+}
+
+.calendar {
+  &--head {
+    height: 70px;
+    padding: 25px 20px;
+    display: flex;
+    justify-content: space-between;
+    div input {
+      max-width: 150px;
+    }
+  }
+
+  &--body {
+    padding: 30px 80px;
+    &-options {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .options--middle {
+        text-align: center;
+      }
+    }
+
+    &-table > ul {
+      display: flex;
+      text-align: center;
+      flex-wrap: wrap;
+      // align-content: center;
+      & > li {
+        flex: 0 0 calc(100% / 5);
+        max-width: calc(100% / 5);
+      }
+    }
+  }
+}
+
+.seven {
+  flex: 0 0 calc(100% / 7) !important;
+  max-width: calc(100% / 7) !important;
+}
