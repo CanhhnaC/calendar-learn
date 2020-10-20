@@ -15,12 +15,12 @@ main {
     box-shadow: 3px 0px 6px rgba(17, 17, 17, 0.6);
     z-index: 2;
 
-    &--head {
+    &__head {
       border-bottom: 1px solid #e8eaf1;
       border-right: 1px solid #dedfe9;
     }
 
-    &--body {
+    &__body {
       border-top: 1px solid #dedfec;
       border-right: 1px solid #e6e8ef;
     }
@@ -31,14 +31,14 @@ main {
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
 
-    &--head {
+    &__head {
       background-color: white;
       border-bottom: 1px solid #e4e6ef;
       border-left: 1px solid #d1d2dd;
       border-top-right-radius: 5px;
     }
 
-    &--body {
+    &__body {
       border-top: 1px solid #d8d8e9;
       border-left: 1px solid #cbcddd;
     }
@@ -48,13 +48,13 @@ main {
 // ==Task==
 .task {
   text-align: center;
-  &--head {
+  &__head {
     color: #8e93b4;
     text-transform: uppercase;
     font-weight: bold;
   }
 
-  &--body {
+  &__body {
     word-wrap: break-word;
 
     h3 {
@@ -134,7 +134,7 @@ main {
         background-color: #e9edf9;
         border-radius: 10px;
 
-        &--status {
+        &__status {
           width: calc(100% * (12/40));
           height: 10px;
           background-color: #4e78fe;
@@ -192,7 +192,7 @@ main {
 
 // ==Calendar==
 .calendar {
-  &--head {
+  &__head {
     color: #9aa0ba;
 
     div {
@@ -213,7 +213,7 @@ main {
 
     input {
       padding: 5px;
-      border: none;
+      border: 1px solid transparent;
       outline: none;
 
       &:focus {
@@ -234,7 +234,7 @@ main {
     }
   }
 
-  &--body {
+  &__body {
     &-options .options {
       &--left button {
         @include button(#4f79ff, white, #4f79ff);
@@ -255,6 +255,9 @@ main {
       &--right button {
         @include button(white, #999cbf, #999cbf);
         border-radius: 20px;
+        padding: 0 10px;
+        white-space: nowrap;
+        margin-left: 5px;
 
         &:last-child {
           @include button(#4f79ff, white, #4f79ff);
@@ -286,11 +289,6 @@ main {
         display: flex;
         justify-content: space-between;
         text-align: right;
-        button {
-          padding: 0 10px;
-          white-space: nowrap;
-          margin-left: 5px;
-        }
       }
     }
 
@@ -346,7 +344,7 @@ main {
           z-index: 20;
           border-radius: 5px;
           color: white;
-
+          padding: 5px;
           span {
             color: white;
           }
@@ -355,8 +353,12 @@ main {
           }
 
           ul {
-            max-height: 25px;
+            max-height: 40px;
             overflow: auto;
+            li {
+              font-size: 8px;
+              // color: red !important;
+            }
             &::-webkit-scrollbar {
               width: 2px;
               height: 2px;

@@ -14,7 +14,7 @@ $(function () {
     let li = $("<li></li>").text(item.id).attr("data-id", item.id);
     item.dayOff ? li.addClass("hidden") : "";
     item.category.name ? li.css(generateColor(item.category)) : "";
-    item.id == "33" ? li.addClass("radius-bottom") : "";
+    item.id == "cell33" ? li.addClass("radius-bottom") : "";
     li.append(cellContent);
     table.append(li);
   }
@@ -22,8 +22,8 @@ $(function () {
   // ‣Show modal when click cell or click button Add Task
   let modalBox = $("#modalBox");
   let sizeTable = {
-    width: $(".calendar--body-table").width(),
-    height: $(".calendar--body-table").height(),
+    width: $(".calendar__body-table").width(),
+    height: $(".calendar__body-table").height(),
   };
   let sizeModal = {
     width: modalBox.width(),
@@ -66,8 +66,9 @@ $(function () {
     !!Calendar[index].category.name
       ? category
           .text(Calendar[index].category.name)
-          .css("background-color", Calendar[index].category.border)
+          .css("background-color", Calendar[index].category.left)
       : category.text("+ Calendar").css("background-color", "");
+      console.log(Calendar[index].category.border);
 
     checkDone(index);
   }

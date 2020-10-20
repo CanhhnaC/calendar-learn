@@ -41,12 +41,12 @@ main {
 
 .task {
   max-width: 250px;
-  &--head {
+  &__head {
     padding: 25px 0;
     height: 70px;
   }
 
-  &--body {
+  &__body {
     //  ‣Info
     &-info {
       padding: 20px 30px;
@@ -89,7 +89,7 @@ main {
 }
 
 .calendar {
-  &--head {
+  &__head {
     height: 70px;
     padding: 25px 20px;
     display: flex;
@@ -99,14 +99,14 @@ main {
     }
   }
 
-  &--body {
+  &__body {
     padding: 30px 80px;
     &-options {
       display: flex;
       justify-content: space-between;
       align-items: center;
 
-      .options--middle {
+      .options__middle {
         text-align: center;
       }
     }
