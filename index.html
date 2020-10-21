@@ -12,7 +12,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/reset.css" />
-    
+
     <link rel="stylesheet" href="icons/css/all.min.css" />
     <link rel="stylesheet" href="css/index.css" />
 
@@ -181,27 +181,41 @@
                 <li class="purple">
                   <span>1</span>
                   <p>Marketing</p>
-                  <ul>
-                    <li>Sales report from last month</li>
-                    <li>Sales report from last month</li>
-                    <li>Sales report from last month</li>
-                    <li>Sales report from last month</li>
-                    <li>Prepare offers for clients</li>
+                  <ul class="drop_item">
+                    <li draggable="true">One</li>
+                    <li
+                      draggable="true"
+                      ondragstart="event.dataTransfer.setData('text/plain',null)"
+                    >
+                      Two
+                    </li>
+                    <li
+                      draggable="true"
+                      ondragstart="event.dataTransfer.setData('text/plain',null)"
+                    >
+                      Three
+                    </li>
+                    <li
+                      draggable="true"
+                      ondragstart="event.dataTransfer.setData('text/plain',null)"
+                    >
+                      Four
+                    </li>
                   </ul>
                   <div>
                     <i class="far fa-check-square"></i>
                     <i class="fas fa-check-circle"></i>
                   </div>
                 </li>
+
                 <li class="yellow">
                   <span>1</span>
                   <p>Marketing</p>
-                  <ul>
-                    <li>Sales report from last month</li>
-                    <li>Sales report from last month</li>
-                    <li>Sales report from last month</li>
-                    <li>Sales report from last month</li>
-                    <li>Prepare offers for clients</li>
+                  <ul class="drop_item">
+                    <li draggable="true">One</li>
+                    <li draggable="true">Two</li>
+                    <li draggable="true">Three</li>
+                    <li draggable="true">Four</li>
                   </ul>
                   <div>
                     <i class="far fa-check-square"></i>
@@ -211,12 +225,11 @@
                 <li class="blue">
                   <span>1</span>
                   <p>Marketing</p>
-                  <ul>
-                    <li>Sales report from last month</li>
-                    <li>Sales report from last month</li>
-                    <li>Sales report from last month</li>
-                    <li>Sales report from last month</li>
-                    <li>Prepare offers for clients</li>
+                  <ul class="drop_item">
+                    <li draggable="true">One</li>
+                    <li draggable="true">Two</li>
+                    <li draggable="true">Three</li>
+                    <li draggable="true">Four</li>
                   </ul>
                   <div>
                     <i class="far fa-check-square"></i>
@@ -226,34 +239,36 @@
                 <li class="red">
                   <span>1</span>
                   <p>Marketing</p>
-                  <ul>
-                    <li>Sales report from last month</li>
-                    <li>Sales report from last month</li>
-                    <li>Sales report from last month</li>
-                    <li>Sales report from last month</li>
-                    <li>Prepare offers for clients</li>
+                  <ul class="drop_item">
+                    <li draggable="true">One</li>
+                    <li draggable="true">Two</li>
+                    <li draggable="true">Three</li>
+                    <li draggable="true">Four</li>
                   </ul>
                   <div>
                     <i class="far fa-check-square"></i>
                     <i class="fas fa-check-circle"></i>
                   </div>
                 </li>
-                <li class="purple">
+                <li class="blue">
                   <span>1</span>
                   <p>Marketing</p>
-                  <ul>
-                    <li>Sales report from last month</li>
-                    <li>Sales report from last month</li>
-                    <li>Sales report from last month</li>
-                    <li>Sales report from last month</li>
-                    <li>Prepare offers for clients</li>
+                  <ul class="drop_item">
+                    <li draggable="true">One</li>
+                    <li draggable="true">Two</li>
+                    <li draggable="true">Three</li>
+                    <li draggable="true">Four</li>
                   </ul>
                   <div>
                     <i class="far fa-check-square"></i>
                     <i class="fas fa-check-circle"></i>
                   </div>
                 </li>
+                <!-- yellow, blue, red, purple -->
               </ul>
+
+              <script src="js/DragAndDrop.js">
+               </script>
             </div>
           </div>
         </div>
@@ -284,5 +299,6 @@
     <script src="js/vendor/jquery-3.5.1.js"></script>
     <script src="js/variable.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/DragAndDrop.js"></script>
   </body>
 </html>

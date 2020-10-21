@@ -305,7 +305,7 @@ main .calendar__body {
 }
 
 .task__body-info .progress__status {
-  width: calc(100% * (12/40));
+  width: calc(100% * (12 / 40));
   height: 10px;
   background-color: #4e78fe;
   border-radius: 10px;
@@ -554,7 +554,7 @@ main .calendar__body {
   height: 100px;
   overflow: hidden;
   text-align: left;
-  padding: 10px 15px;
+  padding: 10px;
 }
 
 .calendar__body-table .days > li span {
@@ -570,72 +570,15 @@ main .calendar__body {
   border-bottom-left-radius: 10px;
 }
 
-.calendar__body-table .days > li:hover {
-  -webkit-transition: 0.5s all;
-  transition: 0.5s all;
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
-  background-color: rebeccapurple;
-  -webkit-box-shadow: 1px 7px 21px -1px rgba(0, 0, 0, 0.51);
-          box-shadow: 1px 7px 21px -1px rgba(0, 0, 0, 0.51);
-  border: 1px solid transparent;
-  z-index: 20;
-  border-radius: 5px;
-  color: white;
-  padding: 5px;
-}
-
-.calendar__body-table .days > li:hover span {
-  color: white;
-}
-
-.calendar__body-table .days > li:hover p {
-  display: block;
-}
-
-.calendar__body-table .days > li:hover ul {
-  max-height: 40px;
-  overflow: auto;
-}
-
-.calendar__body-table .days > li:hover ul li {
-  font-size: 8px;
-}
-
-.calendar__body-table .days > li:hover ul::-webkit-scrollbar {
-  width: 2px;
-  height: 2px;
-}
-
-.calendar__body-table .days > li:hover ul::-webkit-scrollbar-track {
-  border-radius: 5px;
-}
-
-.calendar__body-table .days > li:hover ul::-webkit-scrollbar-thumb {
-  background: white;
-  border-radius: 10px;
-}
-
-.calendar__body-table .days > li:hover div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 .calendar__body-table .days > li ul {
   padding-left: 15px;
   font-size: 10px;
   list-style: disc;
+  min-height: 20px;
 }
 
 .calendar__body-table .days > li ul li {
-  padding-top: 3px;
+  padding-top: 3px !important;
 }
 
 .calendar__body-table .days > li p {
@@ -660,7 +603,7 @@ main .calendar__body {
 }
 
 .calendar__body-table .days > li div i:last-child {
-  font-size: 25px;
+  font-size: 20px;
   color: white;
 }
 
@@ -876,5 +819,65 @@ main .calendar__body {
 .btn-red {
   background-color: #dc3545 !important;
   border-color: #dc3545 !important;
+}
+
+.hover {
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  border: 1px solid transparent !important;
+  z-index: 20;
+  border-radius: 5px;
+  color: inherit;
+  padding: 3px 5px;
+}
+
+.hover span {
+  color: inherit;
+}
+
+.hover p {
+  display: block;
+}
+
+.hover ul {
+  max-height: 37px;
+  margin-bottom: 10px;
+  overflow: auto;
+}
+
+.hover ul li {
+  font-size: 8px;
+}
+
+.hover ul::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+}
+
+.hover ul::-webkit-scrollbar-track {
+  border-radius: 5px;
+}
+
+.hover ul::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 10px;
+}
+
+.hover div {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hover div i {
+  color: inherit;
 }
 /*# sourceMappingURL=index.css.map */

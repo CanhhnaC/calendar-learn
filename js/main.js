@@ -8,14 +8,17 @@ $(function () {
     };
   }
   let table = $(".days");
-  let cellContent = `<div><i class="fas fa-check-square"></i><i class="fas fa-check-circle"></i></div>`;
   for (const index in Calendar) {
+    let task = $(`<ul class="drop_item"></ul>`)
+    let contentTask = Calendar[index].task;
+    let cellContent = `<div><i class="fas fa-check-square"></i><i class="fas fa-check-circle"></i></div>`;
     let item = Calendar[index];
     let li = $("<li></li>").text(item.id).attr("data-id", item.id);
     item.dayOff ? li.addClass("hidden") : "";
     item.category.name ? li.css(generateColor(item.category)) : "";
     item.id == "cell33" ? li.addClass("radius-bottom") : "";
-    li.append(cellContent);
+
+    li.append(task).append(cellContent);
     table.append(li);
   }
 
@@ -68,8 +71,6 @@ $(function () {
           .text(Calendar[index].category.name)
           .css("background-color", Calendar[index].category.left)
       : category.text("+ Calendar").css("background-color", "");
-      console.log(Calendar[index].category.border);
-
     checkDone(index);
   }
   $(".days>li").on("click", showModal);
@@ -82,6 +83,11 @@ $(function () {
       _this.text("Add Task");
     }
     _this.toggleClass("btn-red");
+  });
+  $(window).on("click", function (e) {
+    if ($(e.target).is(modalBox)) {
+      modalBox.hide();
+    }
   });
 
   // ‣Reset data when click remove task
@@ -114,8 +120,24 @@ $(function () {
   $("#modalBox .fa-check-circle").on("click", function () {
     let index = modalBox.attr("data-id");
     Calendar[index].done = !Calendar[index].done;
-    checkDone(index)
+    checkDone(index);
   });
+
+  $(".days>li")
+    .on("mouseenter", function () {
+      let index = $(this).attr("data-id")
+      $(this).addClass("hover")
+      if (index) {
+        $(this).css("background-color", Calendar[index].category.left);
+      }
+    })
+    .on("mouseleave", function () {
+      let index = $(this).attr("data-id")
+      $(this).removeClass("hover")
+      if (index) {
+        $(this).css("background-color", Calendar[index].category.background);
+      }
+    });
 });
 
 jQuery.fn.invisible = function () {

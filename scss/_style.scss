@@ -135,11 +135,10 @@ main {
         border-radius: 10px;
 
         &__status {
-          width: calc(100% * (12/40));
+          width: calc(100% * (12 / 40));
           height: 10px;
           background-color: #4e78fe;
           border-radius: 10px;
-
         }
 
         &::before {
@@ -315,7 +314,7 @@ main {
         overflow: hidden;
 
         text-align: left;
-        padding: 10px 15px;
+        padding: 10px;
         // border-left: 3px solid white;
 
         span {
@@ -334,61 +333,13 @@ main {
 
         // ScrollBar
 
-        // Hover
-        &:hover {
-          transition: 0.5s all;
-          transform: scale(1.5);
-          background-color: rebeccapurple;
-          box-shadow: 1px 7px 21px -1px rgba(0, 0, 0, 0.51);
-          border: 1px solid transparent;
-          z-index: 20;
-          border-radius: 5px;
-          color: white;
-          padding: 5px;
-          span {
-            color: white;
-          }
-          p {
-            display: block;
-          }
-
-          ul {
-            max-height: 40px;
-            overflow: auto;
-            li {
-              font-size: 8px;
-              // color: red !important;
-            }
-            &::-webkit-scrollbar {
-              width: 2px;
-              height: 2px;
-
-              &-track {
-                // border: 1px solid red;
-                border-radius: 5px;
-              }
-
-              &-thumb {
-                background: white;
-                border-radius: 10px;
-              }
-            }
-          }
-
-          div {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-          }
-        }
-
         ul {
           padding-left: 15px;
           font-size: 10px;
           list-style: disc;
-
+          min-height: 20px;
           li {
-            padding-top: 3px;
+            padding-top: 3px !important;
           }
         }
 
@@ -412,7 +363,7 @@ main {
             }
           }
           i:last-child {
-            font-size: 25px;
+            font-size: 20px;
             color: white;
           }
         }
@@ -443,7 +394,7 @@ main {
 
       button {
         @include button(#c5c7dc, white, transparent);
-        border-radius: 15px;     
+        border-radius: 15px;
       }
 
       i {
@@ -452,7 +403,6 @@ main {
           content: " 12.14.1018";
         }
       }
-
     }
 
     &:nth-child(2) {
@@ -539,4 +489,55 @@ main {
 .btn-red {
   background-color: #dc3545 !important;
   border-color: #dc3545 !important;
+}
+
+.hover {
+  transition: 0.5s all;
+  transform: scale(1.5);
+  // background-color: rebeccapurple !important;
+  // box-shadow: 1px 7px 21px -1px rgba(0, 0, 0, 0.51);
+  border: 1px solid transparent !important;
+  z-index: 20;
+  border-radius: 5px;
+  color: inherit;
+  padding: 3px 5px;
+  span {
+    color: inherit;
+  }
+  p {
+    display: block;
+  }
+
+  ul {
+    max-height: 37px;
+    margin-bottom: 10px;
+    overflow: auto;
+    li {
+      font-size: 8px;
+      // color: red !important;
+    }
+    &::-webkit-scrollbar {
+      width: 2px;
+      height: 2px;
+
+      &-track {
+        // border: 1px solid red;
+        border-radius: 5px;
+      }
+
+      &-thumb {
+        background: white;
+        border-radius: 10px;
+      }
+    }
+  }
+
+  div {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    i {
+      color: inherit;
+    }
+  }
 }

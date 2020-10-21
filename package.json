@@ -1,0 +1,23 @@
+{
+  "name": "1b",
+  "version": "1.0.0",
+  "description": "Mô tả có những bài tập gì trong folder này, đề bài ra sao",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/K65TTTH/canh-calendar.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/K65TTTH/canh-calendar/issues"
+  },
+  "homepage": "https://github.com/K65TTTH/canh-calendar#readme",
+  "devDependencies": {
+    "eslint": "^7.11.0",
+    "eslint-config-google": "^0.14.0"
+  }
+}
