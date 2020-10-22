@@ -574,7 +574,7 @@ main .calendar__body {
   padding-left: 15px;
   font-size: 10px;
   list-style: disc;
-  min-height: 20px;
+  min-height: 40px;
 }
 
 .calendar__body-table .days > li ul li {
@@ -634,7 +634,7 @@ main .calendar__body {
           align-items: center;
 }
 
-#modalBox div:first-child button {
+#modalBox div:first-child select {
   background-color: #c5c7dc;
   color: white;
   border: 1px solid transparent;
@@ -645,13 +645,42 @@ main .calendar__body {
   border-radius: 15px;
 }
 
-#modalBox div:first-child button:hover {
+#modalBox div:first-child select:hover {
   background-color: rgba(197, 199, 220, 0.7);
   color: rgba(255, 255, 255, 0.8);
 }
 
-#modalBox div:first-child button:focus {
+#modalBox div:first-child select:focus {
   outline: none;
+}
+
+#modalBox div:first-child select:focus {
+  border: 1px solid #80bdff;
+  -webkit-box-shadow: 0 0 2 0.2rem rgba(0, 123, 255, 0.25);
+          box-shadow: 0 0 2 0.2rem rgba(0, 123, 255, 0.25);
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+
+#modalBox div:first-child select option[value="marketing"] {
+  background-color: #793ba8;
+}
+
+#modalBox div:first-child select option[value="design"] {
+  background-color: #3d3bc3;
+}
+
+#modalBox div:first-child select option[value="development"] {
+  background-color: #d99832;
+}
+
+#modalBox div:first-child select option[value="finance"] {
+  background-color: #e2445b;
+}
+
+#modalBox div:first-child select option[value="default"] {
+  background-color: white;
+  color: black;
 }
 
 #modalBox div:first-child i {
@@ -842,6 +871,7 @@ main .calendar__body {
 }
 
 .hover ul {
+  min-height: 20px;
   max-height: 37px;
   margin-bottom: 10px;
   overflow: auto;

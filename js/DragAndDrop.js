@@ -99,9 +99,9 @@ document.addEventListener(
       removeTask(grandFirst, dragged.innerText);
       // event.target.parentNode.classList.remove("hover");
     }
-    
+
     // Remove when drag outside the calendar
-    let container = $(".container");
+    let container = $(".calendar__body-table");
     if (
       !container.is(event.target) &&
       container.has(event.target).length === 0 &&

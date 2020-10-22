@@ -65,12 +65,13 @@ $(function () {
       ? trash.removeClass("hidden2")
       : trash.addClass("hidden2");
 
-    let category = $("#modalBox .category");
+    let category = $("#modalBox #categorySelect");
+    // console.log(_.toLower(Calendar[index].category.name));
     !!Calendar[index].category.name
       ? category
-          .text(Calendar[index].category.name)
+          .val(_.toLower(Calendar[index].category.name))
           .css("background-color", Calendar[index].category.left)
-      : category.text("+ Calendar").css("background-color", "");
+      : category.css("background-color", "");
     checkDone(index);
   }
   $(".days>li").on("click", showModal);
@@ -140,14 +141,12 @@ $(function () {
     });
 
   $(document).on("click", function (e) {
-    var container = $(".calendar");
+    var container = $(".calendar, #modalBox");
     if (!container.is(e.target) && container.has(e.target).length === 0) {
       $("#modalBox").hide();
     }
   });
-  const container = $(".container");
 });
-
 
 jQuery.fn.invisible = function () {
   return this.css("visibility", "hidden");

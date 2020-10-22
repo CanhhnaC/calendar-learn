@@ -267,8 +267,7 @@
                 <!-- yellow, blue, red, purple -->
               </ul>
 
-              <script src="js/DragAndDrop.js">
-               </script>
+              <script src="js/DragAndDrop.js"></script>
             </div>
           </div>
         </div>
@@ -278,7 +277,13 @@
     <!-- ==MODAL BOX== -->
     <div id="modalBox">
       <div>
-        <button class="category">+ Category</button>
+        <select name="category" id="categorySelect">
+          <option value="default">+ Category</option>
+          <option value="marketing">Marketing</option>
+          <option value="design">Design</option>
+          <option value="development">Development</option>
+          <option value="finance">Finance</option>
+        </select>
         <i class="far fa-calendar-alt"></i>
       </div>
       <div>
