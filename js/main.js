@@ -9,7 +9,7 @@ $(function () {
   }
   let table = $(".days");
   for (const index in Calendar) {
-    let task = $(`<ul class="drop_item"></ul>`)
+    let task = $(`<ul class="drop_item"></ul>`);
     let contentTask = Calendar[index].task;
     let cellContent = `<div><i class="fas fa-check-square"></i><i class="fas fa-check-circle"></i></div>`;
     let item = Calendar[index];
@@ -125,20 +125,29 @@ $(function () {
 
   $(".days>li")
     .on("mouseenter", function () {
-      let index = $(this).attr("data-id")
-      $(this).addClass("hover")
+      let index = $(this).attr("data-id");
+      $(this).addClass("hover");
       if (index) {
         $(this).css("background-color", Calendar[index].category.left);
       }
     })
     .on("mouseleave", function () {
-      let index = $(this).attr("data-id")
-      $(this).removeClass("hover")
+      let index = $(this).attr("data-id");
+      $(this).removeClass("hover");
       if (index) {
         $(this).css("background-color", Calendar[index].category.background);
       }
     });
+
+  $(document).on("click", function (e) {
+    var container = $(".calendar");
+    if (!container.is(e.target) && container.has(e.target).length === 0) {
+      $("#modalBox").hide();
+    }
+  });
+  const container = $(".container");
 });
+
 
 jQuery.fn.invisible = function () {
   return this.css("visibility", "hidden");

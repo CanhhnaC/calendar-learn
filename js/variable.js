@@ -41,6 +41,26 @@ const Category = {
   },
 };
 
+const styleDrag = {
+  backgroundColor: "teal",
+  borderRadius: "5px",
+};
+
+const styleRemove = {
+  backgroundColor: "red",
+  borderRadius: 0,
+  content: "Remove",
+};
+
+const defaultStyle = {
+  backgroundColor: "",
+  borderRadius: "",
+};
+
+const setStylesOnElement = (styles, element) => {
+  Object.assign(element.style, styles);
+};
+
 class Task {
   constructor(category, task, dayOff, done, id) {
     this.category = category || {};
@@ -71,3 +91,20 @@ for (let i = 6; i < 36; i++) {
   }
   Calendar["cell" + i] = generator;
 }
+
+const removeTask = (cell, item) => {
+  index = $(cell).attr("data-id");
+  i = _.indexOf(Calendar[index].task, item);
+  Calendar[index].task.splice(i, 1);
+  // _.pull(Calendar[index].task, item);
+  // _.remove(Calendar[index], {
+  //   task: item,
+  // });
+  // console.log(`Remove ${index}: ${Calendar[index].task}`);
+};
+
+const addTask = (cell, item) => {
+  index = $(cell).attr("data-id");
+  Calendar[index].task.push(item);
+  // console.log(`Add ${index}: ${Calendar[index].task}`);
+};
